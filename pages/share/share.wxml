@@ -1,0 +1,9 @@
+<view class="share_main">
+	<view class="img_area_box">
+		<canvas canvas-id="miniProCodeCanvas" class="img_area" id="miniProCodeCanvas"></canvas>
+		<view class="handle_box">
+			<view class="handle_btn primary">转发到好友或群聊</view>
+			<view class="handle_btn">生成朋友圈分享图</view>
+		</view>
+	</view>
+</view>

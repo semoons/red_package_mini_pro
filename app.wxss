@@ -16,13 +16,13 @@ image {
 }
 
 .brand_color_text {
-	color: #c93938 !important;
+	color: #c83938 !important;
 }
 
 .brand_color_bg {
-	background: #c93938 !important;
+	background: #c83938 !important;
 }
 
 .brand_color_border {
-	border-color: #c93938 !important;
+	border-color: #c83938 !important;
 }

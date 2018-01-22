@@ -4,6 +4,7 @@ const CONFIG = app.globalData.config;
 Page({
     data: {
         // userInfo
+		imgUrl: app.globalData.imgUrl
     },
     
     onLoad: function () {

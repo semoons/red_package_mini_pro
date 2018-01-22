@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     background: #fff;
-    padding: 18rpx 0 10rpx 0;
+    padding: 6rpx 0 10rpx 0;
 }
 
 .tab_item {
@@ -16,4 +16,8 @@
 
 .tab_icon {
     width: 64rpx;
+}
+
+.tab_text {
+	margin-top: -8rpx;
 }

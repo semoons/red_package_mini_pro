@@ -1,0 +1,42 @@
+page {
+	height: 100%;
+	background: #c32f2f;
+}
+
+.img_area_box {
+	position: relative;
+	padding-top: 124%;
+	height: 0;
+}
+
+.img_area {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.handle_box {
+	position: absolute;
+	background: #fff;
+	border-radius: 10rpx;
+	left: 38rpx;
+	right: 38rpx;
+	top: 84%;
+	opacity: .3;
+	text-align: center;
+	padding: 36rpx 40rpx;
+}
+
+.handle_btn {
+	border-radius: 10rpx;
+	border: 1px solid #bfbfbf;
+	line-height: 100rpx;
+}
+
+.primary {
+	background: #089c2a;
+	color: #fff;
+	border: none;
+}

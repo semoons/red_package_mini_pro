@@ -27,5 +27,8 @@
             <view class="create_btn brand_color_bg">生成语音口令</view>
         </view>
     </view>
+	<view class="logo_box">
+		<image src="{{imgUrl}}temp_logo.png" mode="aspectFit" class="logo"></image>
+	</view>
     <tab-bar></tab-bar>
 </view>

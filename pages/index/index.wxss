@@ -1,5 +1,6 @@
 page {
     background: #f1f1f1;
+	font-size: 28rpx;
 }
 
 .command_model {
@@ -76,4 +77,14 @@ page {
     padding: 0 138rpx;
     color: #fff;
     margin-top: 20rpx;
+	font-size: 30rpx;
+}
+
+.logo_box {
+	margin-top: 32rpx;
+	text-align: center;
+}
+
+.logo {
+	height: 48rpx;
 }
