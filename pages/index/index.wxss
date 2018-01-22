@@ -1,0 +1,79 @@
+page {
+    background: #f1f1f1;
+}
+
+.command_model {
+    position: relative;
+    background: #fff;
+    margin: 104rpx 38rpx 0 38rpx;
+    padding: 132rpx 52rpx 64rpx 52rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.avatar_box {
+    position: absolute;
+    left: 50%;
+    top: -75rpx;
+    transform: translateX(-50%);
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.avatar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.input_item_out_box {
+    display: table;
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.input_text,
+.input_item_box {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.input_text {
+    line-height: 66rpx;
+    width: 10rpx;
+    white-space: nowrap;
+}
+
+.input_item_box {
+     padding-left: 34rpx; 
+}
+
+.input_item {
+    height: 66rpx;
+    border-bottom: 1px solid #ddd;
+}
+
+.tip {
+    margin-top: 16rpx;
+    font-size: 22rpx;
+    color: #7f7f7f;
+}
+
+.handle_box {
+    text-align: center;
+    padding-top: 4rpx;
+}
+
+.create_btn {
+    line-height: 90rpx;
+    border-radius: 4rpx;
+    padding: 0 138rpx;
+    color: #fff;
+    margin-top: 20rpx;
+}

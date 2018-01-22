@@ -1,0 +1,23 @@
+<view class="tab_bar">
+    <view class="tab_item">
+         <image
+            src="/images/tab_bar/my_record_icon.png"
+            mode="widthFix"
+            class="tab_icon"></image> 
+        <view>我的记录</view>
+    </view>
+     <view class="tab_item">
+         <image
+            src="/images/tab_bar/my_record_icon.png"
+            mode="widthFix"
+            class="tab_icon"></image> 
+        <view>余额提现</view>
+    </view>
+     <view class="tab_item">
+         <image
+            src="/images/tab_bar/my_record_icon.png"
+            mode="widthFix"
+            class="tab_icon"></image> 
+        <view>常见问题</view>
+    </view>
+</view>

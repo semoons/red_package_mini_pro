@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/component/tab_bar/tab_bar",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c93938",
+    "navigationBarTitleText": "sanse",
+    "navigationBarTextStyle":"#fff"
+  }
+}

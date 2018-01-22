@@ -1,0 +1,19 @@
+.tab_bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background: #fff;
+    padding: 18rpx 0 10rpx 0;
+}
+
+.tab_item {
+    flex: 1;
+    text-align: center;
+    font-size: 18rpx;
+}
+
+.tab_icon {
+    width: 64rpx;
+}

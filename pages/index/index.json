@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "说一说",
+    "usingComponents": {
+        "tab-bar": "/pages/component/tab_bar/tab_bar"
+    }
+}
