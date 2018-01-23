@@ -1,0 +1,195 @@
+page {
+	background: #f8f8f8;
+}
+
+.header_box {
+	text-align: center;
+	color: #fbe194;
+}
+
+.user_box {
+	padding-top: 10rpx;
+	padding-bottom: 40rpx;
+}
+
+.avatar_box {
+	position: relative;
+	width: 168rpx;
+	height: 168rpx;
+	border: 2px solid #d87348;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 20rpx auto;
+}
+
+.avatar_box image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+}
+
+.user_name {
+	font-size: 24rpx;
+}
+
+.voice_icon {
+	width: 41rpx;
+	vertical-align: middle;
+}
+
+.command_box {
+	font-size: 50rpx;
+	padding: 0 56rpx;
+	margin-bottom: 60rpx;
+}
+
+.red_package_value_box {
+	margin-bottom: 10rpx;
+}
+
+.red_package_value {
+	font-size: 76rpx;
+	margin-right: 40rpx;
+	margin-bottom: 10rpx;
+}
+
+.coupon_box {
+	display: inline-block;
+	background: #a52322;
+	line-height: 44rpx;
+	border-radius: 44rpx;
+	padding: 0 22rpx;
+	box-shadow: 0 1px 2px #901e1e inset;
+}
+
+.coupon_tip {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.record_sound_btn {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 62rpx;
+	line-height: 100rpx;
+	border-radius: 100rpx;
+	text-align: center;
+	color: #fff;
+	background: #089c2a;
+}
+
+.link_icon {
+	vertical-align: middle;
+	width: 23rpx;
+	margin-left: 10rpx;
+}
+
+.link_box {
+	display: flex;
+	margin-top: 22rpx;
+}
+
+.link_item {
+	flex: 1;
+	padding: 28rpx 0;
+}
+
+.link_item_icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 36rpx;
+	margin-right: 10rpx;
+}
+
+.link_item_text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.friend_list_box {
+	padding: 0 30rpx;
+}
+
+.red_package_info {
+	position: relative;
+	line-height: 80rpx;
+	font-size: 22rpx;
+	color: #7f7f7f;
+}
+
+.logo {
+	position: absolute;
+	right: 30rpx;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 48rpx;
+}
+
+.friend_item {
+	position: relative;
+	border: 1px solid #efefef;
+	border-radius: 10rpx;
+	background: #fff;
+	padding: 26rpx;
+	margin-bottom: 18rpx;
+}
+
+.user_img_box,
+.friend_info {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.user_img_box {
+	position: relative;
+	width: 92rpx;
+	height: 92rpx;
+	margin-right: 20rpx;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.user_img_box image {
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.friend_name {
+	max-width: 300rpx;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-bottom: 14rpx;
+}
+
+.audio {
+	display: inline-block;
+	background: #f9f9f9;
+	width: 184rpx;
+	box-sizing: border-box;
+	line-height: 64rpx;
+	color: #7f7f7f;
+	font-size: 24rpx;
+	border: 1px solid #efefef;
+	border-radius: 10rpx;
+	padding-left: 18rpx;
+}
+
+.item_info {
+	position: absolute;
+	right: 26rpx;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.date{
+	font-size: 22rpx;
+	color: #7f7f7f;
+}

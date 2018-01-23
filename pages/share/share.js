@@ -149,24 +149,28 @@ Page({
 				const filePath = res.tempFilePath;
 				console.log(filePath);
 
-				wx.saveImageToPhotosAlbum({
-					filePath: filePath,
-					success(res) {
-						try {
-							wx.showToast({
-								title: '图片保存成功',
-							});
-						} catch (e) {
-							console.log(e);
-						}
-
-					},
-					fail(res) {
-						wx.showToast({
-							"title": '保存失败'
-						})
-					}
+				this.setData({
+					shareImgUrl: filePath
 				})
+
+				// wx.saveImageToPhotosAlbum({
+				// 	filePath: filePath,
+				// 	success(res) {
+				// 		try {
+				// 			wx.showToast({
+				// 				title: '图片保存成功',
+				// 			});
+				// 		} catch (e) {
+				// 			console.log(e);
+				// 		}
+
+				// 	},
+				// 	fail(res) {
+				// 		wx.showToast({
+				// 			"title": '保存失败'
+				// 		})
+				// 	}
+				// })
 			}
 		})
 	}

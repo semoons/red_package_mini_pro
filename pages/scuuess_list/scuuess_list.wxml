@@ -1,0 +1,65 @@
+<view class="success_list_main">
+	<view class="header_box brand_color_bg">
+		<view class="user_box">
+			<view class="avatar_box">
+				<image src="{{imgUrl}}temp_img.jpg" mode="widthFix"></image>
+			</view>
+			<view class="user_name">123</view>
+		</view>
+		<view class="command_box">
+			<image src="{{imgUrl}}success_list/voice_icon.png" class="voice_icon" mode="widthFix"></image>
+			测试口令测试口令测试口令测试口令测试口令测试口令
+		</view>
+		<!-- <view>
+			<view class="red_package_value_box">
+				<text class="red_package_value">11.51</text>
+				<text class="unit">元</text>
+			</view>
+			<view class="coupon_box">
+				<text class="coupon_tip">获得由歌莉娅额外赠送现金券x1</text>
+				<image src="{{imgUrl}}success_list/link_icon.png" class="link_icon" mode="widthFix"></image>
+			</view>
+		</view> -->
+		 <view class="record_sound_btn">按住说出以上口令领取赏金</view> 
+		<view class="link_box">
+			<navigator url="" class="link_item">
+				<image src="{{imgUrl}}success_list/redpack_icon.png" class="link_item_icon" mode="widthFix"></image>
+				<text class="link_item_text">发红包</text>
+			</navigator>
+			<navigator url="" class="link_item">
+				<image src="{{imgUrl}}success_list/share_icon.png" class="link_item_icon" mode="widthFix"></image>
+				<text class="link_item_text">转发好友</text>
+			</navigator>
+			<navigator url="" class="link_item">
+				<image src="{{imgUrl}}success_list/cash_icon.png" class="link_item_icon" mode="widthFix"></image>
+				<text class="link_item_text">去提现</text>
+			</navigator>
+		</view>
+	</view>
+	<view class="friend_list_box">
+		<view class="red_package_info">
+			共2.00元，已领取2/4个
+			<image src="{{imgUrl}}temp_logo.png" class="logo" mode="widthFix" style="width: {{logoWidth}}px"></image>
+		</view>
+		<view class="friend_list">
+			<view class="friend_item">
+				<view class="user_img_box">
+					<image src="{{imgUrl}}temp_img.jpg" mode="widthFix"></image>
+				</view>
+				<view class="friend_info">
+					<view class="friend_name">123123123121231231231231233123123123123</view>
+					<audio
+						src="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46"
+						class="audio"
+						id="audio1"
+						data-id="audio1"
+						bindtap="playAudio">12''</audio>
+				</view>
+				<view class="item_info">
+					<view class="money">11.51元</view>
+					<view class="date">11月2日</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

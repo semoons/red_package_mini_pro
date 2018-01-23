@@ -24,7 +24,6 @@ page {
 	left: 38rpx;
 	right: 38rpx;
 	top: 84%;
-	opacity: .3;
 	text-align: center;
 	padding: 36rpx 40rpx;
 }
@@ -33,6 +32,10 @@ page {
 	border-radius: 10rpx;
 	border: 1px solid #bfbfbf;
 	line-height: 100rpx;
+}
+
+.handle_btn + .handle_btn {
+	margin-top: 18rpx;
 }
 
 .primary {
