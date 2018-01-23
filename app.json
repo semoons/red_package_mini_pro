@@ -1,10 +1,8 @@
 {
 	"pages": [
-		
 		"pages/share/share",
 		"pages/scuuess_list/scuuess_list",
 		"pages/index/index",
-		
 		"pages/component/tab_bar/tab_bar",
 		"pages/logs/logs"
 	],

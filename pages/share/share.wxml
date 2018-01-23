@@ -2,7 +2,7 @@
 	<view class="img_area_box">
 		<canvas canvas-id="miniProCodeCanvas" class="img_area" id="miniProCodeCanvas"></canvas>
 		<cover-view class="handle_box">
-			<cover-view class="handle_btn primary">转发到好友或群聊</cover-view>
+			<cover-view class="handle_btn primary" bindtap="handleShowBigImg">转发到好友或群聊</cover-view>
 			<cover-view class="handle_btn">生成朋友圈分享图</cover-view>
 		</cover-view>
 	</view>

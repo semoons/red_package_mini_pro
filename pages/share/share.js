@@ -142,36 +142,17 @@ Page({
 		ctx.stroke();
 	},
 
-	saveImage: function () {
+	handleShowBigImg: function (e) {
 		wx.canvasToTempFilePath({
 			canvasId: 'miniProCodeCanvas',
 			success: function (res) {
 				const filePath = res.tempFilePath;
 				console.log(filePath);
-
-				this.setData({
-					shareImgUrl: filePath
+				wx.previewImage({
+					current: filePath, // 当前显示图片的http链接
+					urls: [filePath] // 需要预览的图片http链接列表
 				})
-
-				// wx.saveImageToPhotosAlbum({
-				// 	filePath: filePath,
-				// 	success(res) {
-				// 		try {
-				// 			wx.showToast({
-				// 				title: '图片保存成功',
-				// 			});
-				// 		} catch (e) {
-				// 			console.log(e);
-				// 		}
-
-				// 	},
-				// 	fail(res) {
-				// 		wx.showToast({
-				// 			"title": '保存失败'
-				// 		})
-				// 	}
-				// })
 			}
 		})
-	}
+	},
 })
