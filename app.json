@@ -1,8 +1,19 @@
 {
 	"pages": [
 		"pages/share/share",
-		"pages/scuuess_list/scuuess_list",
 		"pages/index/index",
+		"pages/scuuess_list/scuuess_list",
+		"pages/component/loading_hover/loading_hover",
+		
+		
+		"pages/record/record",
+		"pages/balance/balance",
+		"pages/component/err_tip/err_tip",
+		"pages/coupon/coupon",
+		"pages/component/receive_record/receive_record",
+		"pages/component/send_record/send_record",
+		
+		
 		"pages/component/tab_bar/tab_bar",
 		"pages/logs/logs"
 	],

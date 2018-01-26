@@ -1,14 +1,10 @@
 <view class="tab_bar">
-    <view class="tab_item">
-        <image src="{{imgUrl}}tab_bar/my_record_icon.png" mode="widthFix" class="tab_icon"></image>
-        <view class="tab_text">我的记录</view>
-    </view>
-    <view class="tab_item">
-        <image src="{{imgUrl}}tab_bar/balance_icon.png" mode="widthFix" class="tab_icon"></image>
-        <view class="tab_text">余额提现</view>
-    </view>
-    <view class="tab_item">
-        <image src="{{imgUrl}}tab_bar/problem_icon.png" mode="widthFix" class="tab_icon"></image>
-        <view class="tab_text">常见问题</view>
-    </view>
+    <navigator
+		class="tab_item"
+		wx:for="{{tabBarList}}"
+		url="{{item.path}}"
+		wx:key="{{index}}">
+        <image src="{{item.iconUrl}}" mode="widthFix" class="tab_icon"></image>
+        <view class="tab_text">{{item.text}}</view>
+    </navigator>
 </view>

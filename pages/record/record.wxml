@@ -1,0 +1,40 @@
+<view class="my_record_main">
+	<view class="tab_bar">
+		<view
+			wx:for="{{tabList}}"
+			wx:key="index"
+			data-index="{{index}}"
+			bindtap="toggleTab"
+			class="tab_item {{index == tabIndex ? 'brand_color_text active' : ''}}">
+			<view class="tab_item_text {{index == tabIndex ? 'brand_color_border' : ''}}">{{item.text}}</view>
+		</view>
+	</view>
+
+	<swiper
+		duration="320"
+		current="{{tabIndex}}"
+		class="tab_page_model"
+		bindchange="handleChange">
+		<block>
+			<swiper-item>
+				<scroll-view
+					class="scroll_model"
+					scroll-y
+					bindscrolltolower="loadData">
+					<send-record record-data="{{tabList[0]}}"></send-record>
+				</scroll-view>
+    		</swiper-item>
+			<swiper-item>
+				<scroll-view
+					class="scroll_model"
+					scroll-y
+					bindscrolltolower="loadData">
+					<receive-record record-data="{{tabList[1]}}"></receive-record>
+				</scroll-view>
+    		</swiper-item>
+  		</block>
+	</swiper>
+
+	
+	
+</view>

@@ -10,8 +10,29 @@ Page({
 	},
 
 	onLoad: function (options) {
+		if (app.globalData.userInfo) {
+			this.setData({
+				brandInfo: app.globalData.brandInfo,
+				userInfo: app.globalData.userInfo
+			})
+
+			this.init();
+		} else {
+			app.userInfoReadyCallback = data => {
+				this.setData({
+					// 因为用户信息需要brandId数据返回后才能拿到~此处已经拿到了用户信息~所以品牌信息一定已经拿到了
+					brandInfo: app.globalData.brandInfo,
+					userInfo: data
+				});
+
+				this.init();
+			}
+		}
+
 		this.initLogo();
 	},
+
+	init: function() {},
 
 	initLogo: function() {
 		const that = this;

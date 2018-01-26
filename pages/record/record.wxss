@@ -1,0 +1,40 @@
+page {
+	background: #f1f1f1;
+	padding-top: 88rpx;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.my_record_main {
+	height: 100%;
+}
+
+.tab_bar {
+	display: flex;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	line-height: 88rpx;
+	background: #fff;
+	z-index: 10;
+}
+
+.tab_item {
+	flex: 1;
+	text-align: center;
+	font-size: 28rpx;
+}
+
+.tab_item_text {
+	display: inline-block;
+}
+
+.tab_item.active .tab_item_text {
+	border-bottom: 2px solid #c83938;
+}
+
+.tab_page_model,
+.scroll_model {
+	height: 100%;
+}

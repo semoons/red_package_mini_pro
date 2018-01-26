@@ -1,0 +1,102 @@
+.header_box {
+	background: #f1f1f1;
+	padding: 48rpx 0;
+	text-align: center;
+	color: #7f7f7f;
+}
+
+.user_box {
+	position: relative;
+	width: 128rpx;
+	height: 128rpx;
+	box-sizing: border-box;
+	border: 2px solid #eccea4;
+	border-radius: 400px;
+	overflow: hidden;
+	margin: 0 auto 8rpx auto;
+}
+
+.user_box image {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	border-radius: 50%;
+}
+
+.user_info {
+	font-size: 20rpx;
+}
+
+.user_name {
+	font-size: 24rpx;
+	color: #333;
+}
+
+.red_package_info {
+	display: flex;
+	margin-top: 20rpx;
+}
+
+.info_item {
+	flex: 1;
+}
+
+.info_value {
+	font-size: 56rpx;
+	margin-bottom: 8rpx;
+}
+
+.record_list {
+	padding-left: 40rpx;
+	background: #fff;
+}
+
+.record_item {
+	position: relative;
+	padding: 40rpx 30rpx 40rpx 0;
+}
+
+.record_item + .record_item {
+	border-top: 1px solid #f1f1f1;
+}
+
+.user_info,
+.record_item .user_box {
+	 display: inline-block; 
+	vertical-align: middle;
+}
+
+.record_item .user_box {
+	width: 92rpx;
+	height: 92rpx;
+	overflow: hidden;
+	border: none;
+}
+
+.user_info {
+	margin-left: 20rpx;
+}
+
+.record_item .user_name {
+	max-width: 300rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 22rpx;
+}
+
+.date {
+	font-size: 24rpx;
+	color: #7f7f7f;
+}
+
+.count_info {
+	float: right;
+}
+
+.sum {
+	font-weight: bolder;
+	margin-bottom: 22rpx;
+}

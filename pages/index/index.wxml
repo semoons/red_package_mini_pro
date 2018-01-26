@@ -1,4 +1,5 @@
 <view class="index_main">
+	<err-tip show-err="{{showErr}}" tip="{{tip}}"></err-tip>
     <view class="command_model">
         <view class="avatar_box">
             <image src="{{userInfo.avatarUrl}}" class="avatar" mode="widthFix"></image>
@@ -6,29 +7,39 @@
         <view class="input_item_out_box">
             <text class="input_text">设置口令</text>
             <view class="input_item_box">
-                <input placeholder="请输入口令" class="input_item"></input>
+                <input placeholder="请输入口令" class="input_item" value="{{playCommand}}"></input>
                 <view class="tip">小伙伴说对口令就能获得随机的打赏</view>
             </view>
         </view>
         <view class="input_item_out_box">
             <text class="input_text">赏金 (元)</text>
             <view class="input_item_box">
-                <input placeholder="0.00" class="input_item"></input>
+                <input
+					type="digit"
+					placeholder="0.00"
+					class="input_item"
+					value="{{redPackMoney}}"
+					bindinput="handleRedPackMoney"></input>
             </view>
         </view>
         <view class="input_item_out_box">
             <text class="input_text">数量 (个)</text>
             <view class="input_item_box">
-                <input placeholder="0" class="input_item"></input>
+                <input
+					type="number"
+					placeholder="0"
+					class="input_item"
+					value="{{redPackCount}}"
+					bindinput="handleRedPackCount"></input>
             </view>
         </view>
         <view class="handle_box">
-            <view class="tip">需支付¥0.00服务费，优先使用余额。</view>
-            <view class="create_btn brand_color_bg">生成语音口令</view>
+            <view class="tip">需支付¥{{servicePrice}}服务费，优先使用余额{{money}}元。</view>
+            <view class="create_btn brand_color_bg" bindtap="createCommand">{{btnText || '生成语音口令'}}</view>
         </view>
     </view>
 	<view class="logo_box">
 		<image src="{{imgUrl}}temp_logo.png" mode="aspectFit" class="logo"></image>
 	</view>
-    <tab-bar></tab-bar>
+    <tab-bar tab-bar-list="{{tabBarList}}"></tab-bar> 
 </view>

@@ -1,0 +1,1 @@
+<view class="err_tip {{showErr === '1' ? 'show' : ''}}">{{tip}}</view>

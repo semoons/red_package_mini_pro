@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "余额提现",
+	"usingComponents": {
+		"err-tip": "/pages/component/err_tip/err_tip"
+	}
+}

@@ -17,10 +17,53 @@ App({
 
     onLaunch: function (options) {
 
+		this.handleBrandCode(options, this.handleUserInfo);
         this.handleCookieId();
-        this.handleUserInfo();
 
     },
+
+	handleBrandCode: function (options, cb) {
+		// 缓存和进入页面的路径都没有brandCode时默认用test方便开发测试~实际上线时一定会带上参数
+		this.globalData.brandCode = options.query.brand_code || wx.getStorageSync('BRAND_CODE') || 'test';
+		try {
+			const storageBrandCode = wx.getStorageSync('BRAND_CODE');
+			if (storageBrandCode && this.globalData.brandCode === storageBrandCode) {
+				this.globalData.brandInfo = wx.getStorageSync('BRAND_INFO');
+				cb(this);
+			} else {
+				this.getBrandInfo(cb);
+			}
+		} catch (e) {}
+	},
+
+	getBrandInfo: function (cb) {
+		const that = this;
+		this.wxRequest({
+			interfaceName: CONFIG.interfaceList.GET_BRAND_INFO,
+			reqData: {
+				brandCode: this.globalData.brandCode
+			},
+			successCb: (res) => {
+				if (this.brandInfoReadyCallback) {
+					this.brandInfoReadyCallback(res);
+				}
+				this.globalData.brandInfo = res.data;
+
+				wx.setStorage({
+					key: 'BRAND_CODE',
+					data: this.globalData.brandCode
+				});
+
+				wx.setStorage({
+					key: 'BRAND_INFO',
+					data: this.globalData.brandInfo,
+					success: function() {
+						cb(that);
+					}
+				})
+			}
+		})
+	},
 
     handleCookieId: function () {
         try {
@@ -38,20 +81,21 @@ App({
         } catch (e) { }
     },
 
-    handleUserInfo: function () {
+	// 获取用户信息处理函数~因为接口中需要用到brandId参数~所以需要被放在brandInfo数据接口的成功的回调中执行
+    handleUserInfo: function (context) {
         try {
             const userInfo = wx.getStorageSync('USER_INFO');
             if (userInfo) {
-                this.globalData.userInfo = userInfo;
+                context.globalData.userInfo = userInfo;
             } else {
                 // 登录
                 wx.login({
                     success: res => {
-                        this.appData.code = res.code;
+                        context.appData.code = res.code;
                         // 获取用户信息
                         wx.getSetting({
                             success: res => {
-                                this.getUserInfo();
+                                context.getUserInfo();
                             }
                         })
                     }
@@ -64,8 +108,43 @@ App({
         console.log('调用了请求用户信息接口');
         wx.getUserInfo({
             success: res => {
+				console.log(res);
                 res.userInfo.code = this.appData.code;
                 let userInfo = res.userInfo;
+
+				const bodyData = {
+					encryptedData: res.encryptedData,
+					iv: res.iv,
+					code: this.appData.code
+				};
+
+				this.wxRequest({
+					interfaceName: CONFIG.interfaceList.LOGIN,
+					reqData: {
+						brandId: this.globalData.brandInfo.id
+					},
+					bodyData: bodyData,
+					successCb: (res) => {
+						userInfo = {
+							...userInfo,
+							...res.data
+						};
+						console.log(this);
+						this.globalData.userInfo = userInfo;
+						wx.setStorage({
+							key: 'USER_INFO',
+							data: userInfo
+						});
+						// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+						// 所以此处加入 callback 以防止这种情况（其实就是确保异步返回的用户信息数据可以渲染到页面上）
+						if (this.userInfoReadyCallback) {
+							this.userInfoReadyCallback(userInfo)
+						}
+					},
+					extendsOptions: {
+						method: 'POST'
+					}
+				})
 
                 // todo-------------------------以下设置用户信息的代码将来对接到具体接口的成功回调函数中
                 this.globalData.userInfo = userInfo;

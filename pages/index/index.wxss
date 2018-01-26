@@ -73,7 +73,7 @@ page {
 
 .create_btn {
     line-height: 90rpx;
-    border-radius: 4rpx;
+    border-radius: 10rpx;
     padding: 0 138rpx;
     color: #fff;
     margin-top: 20rpx;

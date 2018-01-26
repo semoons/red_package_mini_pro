@@ -1,0 +1,37 @@
+<view class="send_record_main">
+	<view class="header_box">
+		<view class="user_box">
+			<image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+		</view>
+		<view class="user_info">
+			<view class="user_name">{{userInfo.nickName}}</view>
+			<view>共发出</view>
+		</view>
+		<view class="red_package_info">
+			<view class="info_item">
+				<view class="info_value">{{recordData.totalMoney}}</view>
+				<view>金额</view>
+			</view>
+			<view class="info_item">
+				<view class="info_value">{{recordData.totalCount}}</view>
+				<view>数量</view>
+			</view>
+		</view>
+	</view>
+	<view class="record_list">
+		<view
+			class="record_item"
+			wx:for="{{recordData.recordList}}"
+			wx:key="{{item.redpacket_send_id}}">
+			<view class="record_info">
+				<view class="command">{{item.play_command}}</view>
+				<view class="date">{{item.create_time}}</view>
+				<!-- <view class="date">1月12日 12:03</view> -->
+			</view>
+			<view class="count_info">
+				<view class="sum">{{item.money}}元</view>
+				<view class="count">{{item.received_count}}/{{item.total_count}}</view>
+			</view>
+		</view>
+	</view>
+</view>

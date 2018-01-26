@@ -14,10 +14,10 @@ Page({
 	},
 
 	onLoad: function (options) {
-		const classifyCode = options.classify_code;
-		const friendCode = options.friend_code;
+		const redpacketSendId = options.redpacket_send_id;
+		const brandCode = options.brand_code;
 		
-		const pathArg = Base64.encode(`/pages/index/index?friend_code=${friendCode}&classify_code=${classifyCode}`);
+		const pathArg = Base64.encode(`/pages/index/index?redpacket_send_id=${redpacketSendId}&brand_code=${brandCode}`);
 		const widthArg = Base64.encode('300');
 		const thumbArg = queryHelper.queryEncoded({ 'link': app.globalData.userInfo.avatarUrl });
 		const miniProCode = `${CONFIG.interfaceDomin}${CONFIG.interfaceList.CREATE_QR_CODE}/${pathArg}&${widthArg}`;
@@ -64,7 +64,7 @@ Page({
 				const coreWidth = Math.floor(0.108 * canvasWidth);
 				
 				const commandText = that.data.commandText;
-				const commandTextArr = commandText.length > 12 ? [commandText.slice(0, 12), commandText.slice(10)] : [commandText];
+				const commandTextArr = commandText.length > 12 ? [commandText.slice(0, 12), commandText.slice(12)] : [commandText];
 				const textY = commandText.length > 12 ? 0.32 * canvasHeight : 0.36 * canvasHeight;
 				
 				const miniProCodeFilePath = down_res.tempFilePath;

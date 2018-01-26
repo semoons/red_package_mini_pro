@@ -1,0 +1,12 @@
+<view class="coupon_main">
+	<view class="blank_bg"></view>
+	<canvas canvas-id="qrCodeCanvas" class="img_area {{doubleLine == '1' ? 'double_line' : ''}}" id="qrCanvas"></canvas>
+	<cover-view class="handle_box">
+		<cover-view class="tip">保存相册后,识别二维码,即可领取</cover-view>
+		<cover-view class="save_btn brand_color_text brand_color_border" bindtap="saveImage">保存到相册</cover-view>
+	</cover-view>
+	<view class="rule_box">
+		<view class="rele_title">使用须知</view>
+		<view class="rule_text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</view>
+	</view>
+</view>

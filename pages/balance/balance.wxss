@@ -1,0 +1,69 @@
+page {
+	background: #f1f1f1;
+}
+
+.balance_box {
+	background: #fff;
+	margin: 28rpx 26rpx;
+	padding: 60rpx 68rpx 68rpx 68rpx;
+	box-shadow: 0 2px 5px #ddd;
+}
+
+.balance_count_box {
+	margin-bottom: 70rpx;
+}
+
+.item_text,
+.balance_count {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.item_text {
+	font-size: 24rpx;
+}
+
+.balance_count {
+	font-size: 56rpx;
+	font-weight: bolder;
+	margin-left: 26rpx;
+}
+
+.amount_of_cash_box {
+	position: relative;
+	margin-top: 24rpx;
+	margin-bottom: 24rpx;
+	padding-left: 30rpx;
+	border-bottom: 1px solid #ddd;
+}
+
+.unit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 36rpx;
+	font-weight: bolder;
+}
+
+.cash_input {
+	height: 84rpx;
+	font-size: 76rpx;
+	font-weight: bolder;
+}
+
+.tip {
+	font-size: 22rpx;
+	margin-bottom: 58rpx;
+}
+
+.all {
+	color: #0683c3;
+	margin-left: 10rpx;
+}
+
+.cash_btn {
+	text-align: center;
+	color: #fff;
+	border-radius: 10rpx;
+	line-height: 100rpx;
+}

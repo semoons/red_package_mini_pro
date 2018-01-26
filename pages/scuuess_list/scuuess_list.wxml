@@ -2,9 +2,9 @@
 	<view class="header_box brand_color_bg">
 		<view class="user_box">
 			<view class="avatar_box">
-				<image src="{{imgUrl}}temp_img.jpg" mode="widthFix"></image>
+				<image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
 			</view>
-			<view class="user_name">123</view>
+			<view class="user_name">{{userInfo.nickName}}</view>
 		</view>
 		<view class="command_box">
 			<image src="{{imgUrl}}success_list/voice_icon.png" class="voice_icon" mode="widthFix"></image>
@@ -22,7 +22,7 @@
 		</view> -->
 		 <view class="record_sound_btn">按住说出以上口令领取赏金</view> 
 		<view class="link_box">
-			<navigator url="" class="link_item">
+			<navigator url="/pages/index/index" class="link_item">
 				<image src="{{imgUrl}}success_list/redpack_icon.png" class="link_item_icon" mode="widthFix"></image>
 				<text class="link_item_text">发红包</text>
 			</navigator>

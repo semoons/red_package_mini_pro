@@ -1,0 +1,22 @@
+<view class="balance_main">
+	<err-tip show-err="{{showErr}}"></err-tip>
+	<view class="balance_box">
+		<view class="balance_count_box">
+			<text class="item_text">账户余额</text>
+			<view class="balance_count">6.00</view>
+		</view>
+		<view>
+			<view class="item_text">提现余额</view>
+			<view class="amount_of_cash_box">
+				<text class="unit">¥</text>
+				<view class="cash_input_box">
+					<input class="cash_input" type="number" auto-focus="true"></input>
+				</view>
+			</view>
+			<view class="tip">
+				提现到微信钱包，<text class="all" bindtap="handleAll">全部提现</text>	
+			</view>
+		</view>
+		<view class="cash_btn brand_color_bg" bindtap="cash">提现</view>
+	</view>
+</view>

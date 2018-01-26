@@ -1,0 +1,16 @@
+.err_tip {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: -48rpx;
+	background: #ea3e34;
+	color: #fff;
+	line-height: 48rpx;
+	text-align: center;
+	transition: top .32s;
+	z-index: 20;
+}
+
+.err_tip.show {
+	top: 0;
+}

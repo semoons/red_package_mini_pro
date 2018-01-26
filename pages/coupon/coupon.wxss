@@ -1,0 +1,73 @@
+page {
+	height: 100%;
+	background: #c83938;
+}
+
+.blank_bg {
+	position: fixed;
+	width: 720rpx;
+	top: 44rpx;
+	bottom: 0;
+	 background: #fff; 
+	border-radius: 20rpx 20rpx 0 0;
+	left: 15rpx;
+	right: 15rpx;
+	z-index: -1;
+}
+
+.coupon_main {
+	height: 100%;
+	padding-top: 44rpx;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.img_area {
+	margin: 0 15rpx;
+	width: 720rpx;
+	height: 800rpx;
+}
+
+.img_area.double_line {
+	height: 896rpx;
+}
+
+.handle_box {
+	position: relative;
+	top: -20rpx;
+	width: 720rpx;
+	margin: 0 15rpx;
+	background: #fff;
+	padding-top: 20rpx;
+}
+
+.tip {
+	font-size: 20rpx;
+	color: #7f7f7f;
+}
+
+.save_btn {
+	width: 305rpx;
+	line-height: 85rpx;
+	border-radius: 85rpx;
+	border: 1px solid #fff;
+	margin: 18rpx auto;
+}
+
+.rule_box {
+	margin: 0 30rpx;
+	padding: 34rpx 32rpx;
+	border-top: 1px dashed #dbdadc;
+	text-align: left;
+	font-size: 24rpx;
+}
+
+.rele_title {
+	margin-bottom: 16rpx;
+}
+
+.rule_text {
+	word-wrap: break-word;
+	width: 100%;
+	line-height: 1.6;
+}
