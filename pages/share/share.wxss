@@ -5,11 +5,11 @@ page {
 
 .img_area_box {
 	position: relative;
-	padding-top: 124%;
+	padding-top: 104%;
 	height: 0;
 }
 
-.img_area {
+.img_area_hide {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -17,13 +17,19 @@ page {
 	height: 100%;
 }
 
+.img_area_hide {
+	height: 119.23%;
+	top: -150%;
+}
+
+.img_area_hide.hide {
+    display: none;
+}
+
 .handle_box {
-	position: absolute;
 	background: #fff;
 	border-radius: 10rpx;
-	left: 38rpx;
-	right: 38rpx;
-	top: 84%;
+	margin: 0 38rpx;
 	text-align: center;
 	padding: 36rpx 40rpx;
 }

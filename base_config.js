@@ -1,13 +1,13 @@
 const config = {
 	"interfaceDomin": "https://miniptapi.innourl.com/Redpacket/", // 测试环境接口域名
-	"imgUrl": "http://10.1.1.5:8092/images/red_package_min_pro/", // 测试环境图片地址
-	// "imgUrl": "http://inno.mo2o.com.cn:8092/images/red_package_min_pro/", // 测试环境图片地址
-    "pageSize": 20,
-    "reqMethod": "GET",
-    "header": {
-        'content-type': 'application/json'
-    },
-    "interfaceList": {
+	// "imgUrl": "http://10.1.1.5:8092/images/red_package_min_pro/", // 测试环境图片地址
+	"imgUrl": "http://inno.mo2o.com.cn:8092/images/red_package_min_pro/", // 测试环境图片地址
+	"pageSize": 20,
+	"reqMethod": "GET",
+	"header": {
+		'content-type': 'application/json'
+	},
+	"interfaceList": {
 		/**
 		 * 根据brand_code获取品牌信息
 		 * {brandCode}
@@ -51,8 +51,13 @@ const config = {
 		 * 获取指定红包的领取情况
 		 * {redpackageSendId}&{userId}
 		 */
-		"GET_REDPACKETrECEIVE_LIST": "GetRedpacketReceivedListById"
-    }
+		"GET_REDPACKETrECEIVE_LIST": "GetRedpacketReceivedListById",
+		/**
+		 * 获取小程序码
+		 * {path}&{width}&{scene}
+		 */
+		"CREATE_MINI_PRO_CODE": "WxSupport/CreateMiniProCode"
+	}
 }
 
 module.exports.config = config;

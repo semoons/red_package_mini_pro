@@ -26,3 +26,7 @@ image {
 .brand_color_border {
 	border-color: #c83938 !important;
 }
+
+button {
+    font-size: 26rpx;
+}
